@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html lang="pt" ng-app="store">
+    <head>
+        <title>AngularJS Example App - iUZ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <script type="text/javascript" src="js/vendor/angular.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        
+        <div class="main" ng-controller="StoreController as store">
+            <h1>Car of the week: {{store.car.brand}} {{store.car.model}} ~ {{store.car.year}}</h1>
+        </div>
+    </body>
+</html>
