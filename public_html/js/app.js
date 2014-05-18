@@ -7,6 +7,7 @@
 
     app.controller('StoreController', function() {
         this.cars = cars;
+        this.closedStore = false;
     });
     
     

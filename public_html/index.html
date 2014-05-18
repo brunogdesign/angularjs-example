@@ -13,6 +13,7 @@
     
     <body>
         <script type="text/javascript" src="js/vendor/angular.js"></script>
+        <script type="text/javascript" src="js/vendor/i18n/angular-locale_pt-pt.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         
         
@@ -22,13 +23,15 @@
             
             <h2>Car of the week: {{store.cars[0].brand}} {{store.cars[0].model}} ~ {{store.cars[0].year}}</h2>
             
-            <h2>Cars:</h2>
             
-            <div ng-repeat="car in store.cars">
-                <h4>{{car.brand}} {{car.model}} - {{car.price}} &euro;</h4>
+            <!-- Cars list -->
+            <h2 ng-hide="store.closedStore">Cars:</h2>
+            
+            <div ng-repeat="car in store.cars" ng-hide="store.closedStore">
+                <h4>{{car.brand}} {{car.model}} - {{car.price | currency}}</h4>
                 
                 <button ng-show="car.canPurchase">Buy this car</button>
-            </div>
+            </div> <!-- / Cars list -->
         </div>
     </body>
     
